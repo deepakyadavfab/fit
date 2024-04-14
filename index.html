@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="stylesheet" href="./src/style.css">
+    <title>FitLog - Track your weight, reach your goals</title>
+</head>
+<body>
+    <div id="blocker"></div>
+
+    <div id="modal" class="rounded-card">
+        <h3>Input your weight</h3>
+        <div>
+            <label for="day">Date:</label>
+            <input type="date" id="day">
+        </div>
+        <div>
+            <label for="weight">Current Weight:</label>
+            <input type="text" id="weight" autocomplete="off">
+        </div>
+        <button id="confirm">Confirm</button>
+    </div>
+
+    <div id="app">
+        <section>
+            <h2>Your Progress</h2>
+            <canvas id="chart"></canvas>
+        </section>
+
+        <section>
+            <div class="rounded-card" id="info">
+                <h3>Your latest weight-in</h3>
+                <div>
+                    <span>
+                        <span class="material-symbols-outlined">
+                            calendar_month
+                        </span>
+                        <span id="latest-day"></span>
+                    </span>
+                    <span>
+                        <span class="material-symbols-outlined">
+                            monitor_weight
+                        </span>
+                        <span id="latest-weight"></span>
+                    </span>
+                </div>
+            </div>
+        </section>
+        <section>
+            <h2>Personal info</h2>
+            <div class="rounded-card" id="actions">
+                <span>
+                    By logging your weight daily,
+                    you can track your progress and
+                    stay on top of your fitness goals!
+                </span>
+                <div>
+                    <span id="btn">
+                        Log Weight
+                    </span>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/animejs@3.2.1/lib/anime.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.2.1/dist/chart.umd.min.js"></script>
+    <script src="./src/script.js"></script>
+</body>
+</html>
